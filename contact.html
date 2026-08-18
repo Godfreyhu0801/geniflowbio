@@ -25,11 +25,106 @@
         body {
             background-color: var(--bg-color);
             color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* 顶部导航栏 / Top Header */
+        .navbar {
+            background-color: #ffffff;
+            border-bottom: 1px solid var(--border-color);
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 40px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .nav-logo {
+            height: 42px;
+            width: auto;
+            display: block;
+        }
+
+        .nav-divider {
+            height: 24px;
+            width: 1px;
+            background-color: var(--border-color);
+        }
+
+        .brand-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #0f172a;
+            letter-spacing: -0.3px;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #334155;
+            font-size: 15px;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        /* 语言切换器 / Language Switcher */
+        .lang-switcher {
+            display: flex;
+            background-color: #f1f5f9;
+            padding: 3px;
+            border-radius: 8px;
+            gap: 2px;
+        }
+
+        .lang-btn {
+            padding: 6px 14px;
+            font-size: 13px;
+            font-weight: 600;
+            border: none;
+            background: transparent;
+            color: #64748b;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+
+        .lang-btn.active {
+            background-color: #ffffff;
+            color: #0f172a;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        /* 页面主要区域 / Main Section */
+        .main-container {
+            flex: 1;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            padding: 20px;
+            padding: 40px 20px;
         }
 
         .container {
@@ -154,38 +249,64 @@
 </head>
 <body>
 
-<div class="container">
-    <div class="header">
-        <h1>提交技術諮詢</h1>
-        <p>請填寫您的需求，我們的工程師團隊將在 24 小時內與您聯繫。</p>
+<!-- 顶部导航栏 / Top Navigation Header -->
+<header class="navbar">
+    <div class="nav-left">
+        <img src="logo.png" alt="Geniflow Biotech Logo" class="nav-logo" onerror="this.style.display='none'">
+        <div class="nav-divider"></div>
+        <a href="index.html" class="brand-title">Geniflow Biotech</a>
     </div>
 
-    <form id="contactForm" onsubmit="handleMailto(event)">
-        <div class="form-group">
-            <label for="name">姓名 / Name</label>
-            <input type="text" id="name" class="form-control" placeholder="例如：Jenny" required>
-        </div>
+    <ul class="nav-links">
+        <li><a href="about.html">關於我們</a></li>
+        <li><a href="services.html">服務與方案</a></li>
+        <li><a href="research.html">前沿研發</a></li>
+        <li><a href="cases.html">工作經驗與案例</a></li>
+        <li><a href="contact.html" class="active">聯繫我們</a></li>
+    </ul>
 
-        <div class="form-group">
-            <label for="email">電子郵箱 / Email</label>
-            <input type="email" id="email" class="form-control" placeholder="yourname@domain.com" required>
-        </div>
-
-        <div class="form-group">
-            <label for="details">諮詢需求描述 / Project Details</label>
-            <textarea id="details" class="form-control" placeholder="請描述您的技術諮詢或合作需求..." required></textarea>
-        </div>
-
-        <button type="submit" class="btn-submit">發送諮詢需求</button>
-    </form>
-
-    <div class="divider"></div>
-
-    <div class="footer-info">
-        <p><span class="icon">📍</span> <strong>香港公司地址：</strong>Smart-Space 8, Cyberport, Hong Kong</p>
-        <p><span class="icon">✉️</span> <strong>官方聯絡郵箱：</strong><a href="mailto:contact@geniflowbio.com">contact@geniflowbio.com</a></p>
+    <div class="lang-switcher">
+        <button class="lang-btn active">繁中</button>
+        <button class="lang-btn">簡中</button>
+        <button class="lang-btn">EN</button>
     </div>
-</div>
+</header>
+
+<!-- 页面主体表单区域 / Main Form Content -->
+<main class="main-container">
+    <div class="container">
+        <div class="header">
+            <h1>提交技術諮詢</h1>
+            <p>請填寫您的需求，我們的工程師團隊將在 24 小時內與您聯繫。</p>
+        </div>
+
+        <form id="contactForm" onsubmit="handleMailto(event)">
+            <div class="form-group">
+                <label for="name">姓名 / Name</label>
+                <input type="text" id="name" class="form-control" placeholder="例如：Jenny" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">電子郵箱 / Email</label>
+                <input type="email" id="email" class="form-control" placeholder="yourname@domain.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="details">諮詢需求描述 / Project Details</label>
+                <textarea id="details" class="form-control" placeholder="請描述您的技術諮詢或合作需求..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">發送諮詢需求</button>
+        </form>
+
+        <div class="divider"></div>
+
+        <div class="footer-info">
+            <p><span class="icon">📍</span> <strong>香港公司地址：</strong>Smart-Space 8, Cyberport, Hong Kong</p>
+            <p><span class="icon">✉️</span> <strong>官方聯絡郵箱：</strong><a href="mailto:contact@geniflowbio.com">contact@geniflowbio.com</a></p>
+        </div>
+    </div>
+</main>
 
 <script>
     function handleMailto(event) {
