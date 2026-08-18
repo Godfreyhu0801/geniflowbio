@@ -1,77 +1,213 @@
 <!DOCTYPE html>
-<html lang="zh-HK">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>聯繫我們 | Geniflow Biotech</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = { theme: { extend: { colors: { brandBlue: '#0284C7', brandTeal: '#00A896', brandRed: '#DC2626' } } } }
-    </script>
-</head>
-<body class="bg-slate-50 text-slate-800 antialiased flex flex-col min-h-screen">
-    <header class="sticky top-0 z-50 bg-white border-b border-slate-100 shadow-sm">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="index.html" class="flex items-center space-x-3">
-                <img src="logo.png" alt="Logo" class="h-10 w-auto" onerror="this.style.display='none'">
-                <span class="font-bold text-xl tracking-tight text-slate-900 border-l border-slate-200 pl-3">Geniflow Biotech</span>
-            </a>
-            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
-                <a href="index.html" class="hover:text-brandBlue transition" data-i18n="nav_about">關於我們</a>
-                <a href="services.html" class="hover:text-brandBlue transition" data-i18n="nav_services">服務與方案</a>
-                <a href="pipeline.html" class="hover:text-brandBlue transition" data-i18n="nav_tech">前沿研發</a>
-                <a href="experience.html" class="hover:text-brandBlue transition" data-i18n="nav_exp">工作經驗与案例</a>
-                <a href="contact.html" class="text-brandBlue font-bold" data-i18n="nav_contact">聯繫我們</a>
-            </nav>
-            <div class="flex items-center space-x-2 text-xs font-semibold bg-slate-100 p-1 rounded-lg">
-                <button onclick="setLang('tc')" id="btn-tc" class="px-2.5 py-1 rounded-md bg-white text-slate-900 shadow-sm">繁中</button>
-                <button onclick="setLang('sc')" id="btn-sc" class="px-2.5 py-1 rounded-md text-slate-500">簡中</button>
-                <button onclick="setLang('en')" id="btn-en" class="px-2.5 py-1 rounded-md text-slate-500">EN</button>
-            </div>
-        </div>
-    </header>
-
-    <main class="flex-grow py-16 max-w-4xl mx-auto px-6">
-        <div class="bg-white p-10 rounded-2xl shadow-sm border border-slate-200">
-            <h1 class="text-3xl font-bold text-slate-900 mb-2 text-center" data-i18n="title">提交技術諮詢</h1>
-            <p class="text-sm text-slate-500 text-center mb-8" data-i18n="subtitle">請填寫您的需求，我們的工程師團隊將在 24 小時內與您聯繫。</p>
-            <form class="space-y-4">
-                <div>
-                    <label class="block text-xs font-semibold text-slate-700 mb-1" data-i18n="f_name">姓名 / Name</label>
-                    <input type="text" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brandBlue focus:outline-none text-sm">
-                </div>
-                <div>
-                    <label class="block text-xs font-semibold text-slate-700 mb-1" data-i18n="f_email">電子郵箱 / Email</label>
-                    <input type="email" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brandBlue focus:outline-none text-sm">
-                </div>
-                <div>
-                    <label class="block text-xs font-semibold text-slate-700 mb-1" data-i18n="f_desc">諮詢需求描述 / Project Details</label>
-                    <textarea rows="4" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brandBlue focus:outline-none text-sm"></textarea>
-                </div>
-                <button type="button" class="w-full bg-brandBlue hover:bg-sky-600 text-white font-semibold py-3 rounded-lg shadow transition" data-i18n="f_submit">發送諮詢需求</button>
-            </form>
-
-            <div class="mt-10 border-t border-slate-100 pt-6 text-xs text-slate-500 space-y-2">
-                <p>📍 <strong>香港公司地址：</strong>Smart-Space 8, Cyberport, Hong Kong</p>
-                <p>📧 <strong>官方聯絡郵箱：</strong>contact@geniflowbio.com</p>
-            </div>
-        </div>
-    </main>
-
-    <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800 text-sm text-center">
-        <p>&copy; 2026 Geniflow Biotech Limited. All rights reserved.</p>
-    </footer>
-
-    <script>
-        const dict = {
-            tc: { nav_about:"關於我們", nav_services:"服務與方案", nav_tech:"前沿研發", nav_exp:"工作經驗与案例", nav_contact:"聯繫我們", title:"提交技術諮詢", subtitle:"請填寫您的需求，我們的工程師團隊將在 24 小時內與您聯繫。", f_name:"姓名 / Name", f_email:"電子郵箱 / Email", f_desc:"諮詢需求描述 / Project Details", f_submit:"發送諮詢需求" },
-            sc: { nav_about:"关于我们", nav_services:"服务与方案", nav_tech:"前沿研发", nav_exp:"工作经验与案例", nav_contact:"联系我们", title:"提交技术咨询", subtitle:"请填写您的需求，我们的工程师团队将在 24 小时内与您联系。", f_name:"姓名 / Name", f_email:"电子邮箱 / Email", f_desc:"咨询需求描述 / Project Details", f_submit:"发送咨询需求" },
-            en: { nav_about:"About Us", nav_services:"Services", nav_tech:"R&D", nav_exp:"Experience & Cases", nav_contact:"Contact", title:"Request a Consultation", subtitle:"Fill out your inquiries, and our engineering team will reach out within 24 hours.", f_name:"Full Name", f_email:"Email Address", f_desc:"Project Details", f_submit:"Submit Request" }
-        };
-        function setLang(l) {
-            document.querySelectorAll('[data-i18n]').forEach(el => { const k = el.getAttribute('data-i18n'); if(dict[l][k]) el.textContent = dict[l][k]; });
-            ['tc','sc','en'].forEach(x => document.getElementById(`btn-${x}`).className = x===l ? "px-2.5 py-1 rounded-md bg-white text-slate-900 shadow-sm font-semibold" : "px-2.5 py-1 rounded-md text-slate-500");
+    <title>聯繫我們 - 智流生物科技 (Geniflow Biotech)</title>
+    <style>
+        :root {
+            --primary-color: #0080c6;
+            --primary-hover: #0066a1;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
         }
-    </script>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            background: var(--card-bg);
+            width: 100%;
+            max-width: 520px;
+            padding: 40px 32px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--text-main);
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+
+        .header p {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-main);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 16px;
+            font-size: 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background-color: #fff;
+            color: var(--text-main);
+            transition: all 0.2s ease;
+            outline: none;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(0, 128, 198, 0.15);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .btn-submit {
+            display: block;
+            width: 100%;
+            padding: 14px 20px;
+            background-color: var(--primary-color);
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            margin-top: 24px;
+        }
+
+        .btn-submit:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .btn-submit:active {
+            transform: scale(0.99);
+        }
+
+        .divider {
+            height: 1px;
+            background-color: var(--border-color);
+            margin: 32px 0 24px 0;
+        }
+
+        .footer-info {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        .footer-info p {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 6px;
+        }
+
+        .footer-info .icon {
+            margin-right: 8px;
+            font-style: normal;
+        }
+
+        .footer-info a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .footer-info a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>提交技術諮詢</h1>
+        <p>請填寫您的需求，我們的工程師團隊將在 24 小時內與您聯繫。</p>
+    </div>
+
+    <form id="contactForm" onsubmit="handleMailto(event)">
+        <div class="form-group">
+            <label for="name">姓名 / Name</label>
+            <input type="text" id="name" class="form-control" placeholder="例如：Jenny" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">電子郵箱 / Email</label>
+            <input type="email" id="email" class="form-control" placeholder="yourname@domain.com" required>
+        </div>
+
+        <div class="form-group">
+            <label for="details">諮詢需求描述 / Project Details</label>
+            <textarea id="details" class="form-control" placeholder="請描述您的技術諮詢或合作需求..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">發送諮詢需求</button>
+    </form>
+
+    <div class="divider"></div>
+
+    <div class="footer-info">
+        <p><span class="icon">📍</span> <strong>香港公司地址：</strong>Smart-Space 8, Cyberport, Hong Kong</p>
+        <p><span class="icon">✉️</span> <strong>官方聯絡郵箱：</strong><a href="mailto:contact@geniflowbio.com">contact@geniflowbio.com</a></p>
+    </div>
+</div>
+
+<script>
+    function handleMailto(event) {
+        event.preventDefault();
+
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const details = document.getElementById('details').value.trim();
+
+        const recipient = "contact@geniflowbio.com";
+        const subject = encodeURIComponent("【技術諮詢】來自 " + name + " 的需求");
+        
+        const bodyContent = "姓名 / Name: " + name + "\n" +
+                            "電子郵箱 / Email: " + email + "\n\n" +
+                            "諮詢需求描述 / Project Details:\n" + details;
+
+        const body = encodeURIComponent(bodyContent);
+
+        // 喚起本地郵件客戶端
+        window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
+    }
+</script>
+
 </body>
 </html>
