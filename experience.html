@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>工作經驗與科研成果 | Geniflow Biotech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { brandBlue: '#0284C7', brandTeal: '#00A896', brandRed: '#DC2626' } } } }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased flex flex-col min-h-screen">
+    <header class="sticky top-0 z-50 bg-white border-b border-slate-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-3">
+                <img src="logo.png" alt="Logo" class="h-10 w-auto" onerror="this.style.display='none'">
+                <span class="font-bold text-xl tracking-tight text-slate-900 border-l border-slate-200 pl-3">Geniflow Biotech</span>
+            </a>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+                <a href="index.html" class="hover:text-brandBlue transition" data-i18n="nav_about">關於我們</a>
+                <a href="services.html" class="hover:text-brandBlue transition" data-i18n="nav_services">服務與方案</a>
+                <a href="pipeline.html" class="hover:text-brandBlue transition" data-i18n="nav_tech">前沿研發</a>
+                <a href="experience.html" class="text-brandBlue font-bold" data-i18n="nav_exp">工作經驗与案例</a>
+                <a href="contact.html" class="hover:text-brandBlue transition" data-i18n="nav_contact">聯繫我們</a>
+            </nav>
+            <div class="flex items-center space-x-2 text-xs font-semibold bg-slate-100 p-1 rounded-lg">
+                <button onclick="setLang('tc')" id="btn-tc" class="px-2.5 py-1 rounded-md bg-white text-slate-900 shadow-sm">繁中</button>
+                <button onclick="setLang('sc')" id="btn-sc" class="px-2.5 py-1 rounded-md text-slate-500">簡中</button>
+                <button onclick="setLang('en')" id="btn-en" class="px-2.5 py-1 rounded-md text-slate-500">EN</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow py-16 max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h1 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4" data-i18n="title">工作經驗與代表性科研成果</h1>
+            <p class="text-slate-600 max-w-2xl mx-auto" data-i18n="subtitle">團隊在計算生物力學、AI 物理表型預測、微流控單細胞包裹、高通量納米藥物合成等領域發表的部分高水平期刊論文與项目成果。</p>
+        </div>
+
+        <div class="space-y-12 max-w-5xl mx-auto">
+            
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden grid md:grid-cols-12 items-center">
+                <div class="md:col-span-5 bg-slate-100 p-4 flex items-center justify-center min-h-[220px]">
+                    <img src="case-droplet.png" alt="超弹性细胞微液滴包裹" class="max-h-52 w-auto object-contain rounded border border-slate-200" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x250?text=Please+Upload+case-droplet.png';">
+                </div>
+                <div class="md:col-span-7 p-6 md:p-8">
+                    <span class="text-xs font-semibold text-brandBlue bg-sky-50 border border-sky-200 px-2.5 py-0.5 rounded mb-3 inline-block">Physics of Fluids (2026)</span>
+                    <h2 class="text-xl font-bold text-slate-900 mb-3" data-i18n="c1_h">微流控液滴中超彈性細胞的確定性包裹與流固耦合機制</h2>
+                    <p class="text-sm text-slate-600 leading-relaxed mb-4" data-i18n="c1_d">
+                        構建了結合 Cahn-Hilliard 相場模型與 ALE 方法的數值計算框架，精細揭示了超彈性細胞在聚焦微流場中的流固耦合大變形規律，並提出了定量預測確定性液滴包裹的無量綱標度律。
+                    </p>
+                    <div class="text-xs text-slate-400 font-mono">doi: 10.1063/5.0338713</div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden grid md:grid-cols-12 items-center">
+                <div class="md:col-span-5 bg-slate-100 p-4 flex items-center justify-center min-h-[220px]">
+                    <img src="case-micromixer.png" alt="超椭圆分叉微混合器" class="max-h-52 w-auto object-contain rounded border border-slate-200" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x250?text=Please+Upload+case-micromixer.png';">
+                </div>
+                <div class="md:col-span-7 p-6 md:p-8">
+                    <span class="text-xs font-semibold text-brandTeal bg-teal-50 border border-teal-200 px-2.5 py-0.5 rounded mb-3 inline-block">Physics of Fluids (2026)</span>
+                    <h2 class="text-xl font-bold text-slate-900 mb-3" data-i18n="c2_h">超橢圓分叉微混合器助力脂質納米粒 (LNP) 高通量可控合成</h2>
+                    <p class="text-sm text-slate-600 leading-relaxed mb-4" data-i18n="c2_d">
+                        利用慣性與二次渦流機制，設計并評估了超橢圓分叉結構的微混合器。數值模擬表明該結構能大幅提升多相超快混合效率，實現 mRNA-LNP 等納米藥物的高通量、粒徑可控合成。
+                    </p>
+                    <div class="text-xs text-slate-400 font-mono">doi: 10.1063/5.0319880</div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden grid md:grid-cols-12 items-center">
+                <div class="md:col-span-5 bg-slate-100 p-4 flex items-center justify-center min-h-[220px]">
+                    <img src="case-dl-cell.png" alt="深度学习预测细胞力学参数" class="max-h-52 w-auto object-contain rounded border border-slate-200" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x250?text=Please+Upload+case-dl-cell.png';">
+                </div>
+                <div class="md:col-span-7 p-6 md:p-8">
+                    <span class="text-xs font-semibold text-brandRed bg-red-50 border border-red-200 px-2.5 py-0.5 rounded mb-3 inline-block">Appl. Math. Mech. (2024)</span>
+                    <h2 class="text-xl font-bold text-slate-900 mb-3" data-i18n="c4_h">基於深度學習的微通道單細胞力學特性高通量實時預測</h2>
+                    <p class="text-sm text-slate-600 leading-relaxed mb-4" data-i18n="c4_d">
+                        結合 CFD 流体仿真数据与卷积神经网络（CNN），建立了由细胞穿过狭窄微通道动态形变直接反演其弹性模量与物理本构方程的 AI 预测框架，打破了传统单细胞力学测量低通量、高门槛的瓶颈。
+                    </p>
+                    <div class="text-xs text-slate-400 font-mono">doi: 10.1007/s10483-024-3187-6</div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden grid md:grid-cols-12 items-center">
+                <div class="md:col-span-5 bg-slate-100 p-4 flex items-center justify-center min-h-[220px]">
+                    <img src="case-gating.png" alt="渐变截面微通道细胞挤压与膜穿孔" class="max-h-52 w-auto object-contain rounded border border-slate-200" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x250?text=Please+Upload+case-gating.png';">
+                </div>
+                <div class="md:col-span-7 p-6 md:p-8">
+                    <span class="text-xs font-semibold text-brandBlue bg-sky-50 border border-sky-200 px-2.5 py-0.5 rounded mb-3 inline-block">Microfluidics and Nanofluidics (2021)</span>
+                    <h2 class="text-xl font-bold text-slate-900 mb-3" data-i18n="c5_h">漸變截面微通道內細胞擠壓形變與膜穿孔 (Gating) 機制</h2>
+                    <p class="text-sm text-slate-600 leading-relaxed mb-4" data-i18n="c5_d">
+                        采用浸入有限元法（IFEM）对细胞/胶囊穿越渐变微通道时的流固耦合过程进行模拟，建立了定量评价细胞膜张力分布与胞内递送穿孔（Gating）区域的计算模型，为微流控细胞挤压递送芯片设计提供了理论指导。
+                    </p>
+                    <div class="text-xs text-slate-400 font-mono">doi: 10.1007/s10404-020-02415-6</div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden grid md:grid-cols-12 items-center">
+                <div class="md:col-span-5 bg-slate-100 p-4 flex items-center justify-center min-h-[220px]">
+                    <img src="case-bbb.png" alt="血脑屏障紧密连接受力响应" class="max-h-52 w-auto object-contain rounded border border-slate-200" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x250?text=Please+Upload+case-bbb.png';">
+                </div>
+                <div class="md:col-span-7 p-6 md:p-8">
+                    <span class="text-xs font-semibold text-brandTeal bg-teal-50 border border-teal-200 px-2.5 py-0.5 rounded mb-3 inline-block">Biomech. Model. Mechanobiol. (2026)</span>
+                    <h2 class="text-xl font-bold text-slate-900 mb-3" data-i18n="c3_h">穩態空化下緊密連接對血腦屏障 (BBB) 生物力學響應的影響</h2>
+                    <p class="text-sm text-slate-600 leading-relaxed mb-4" data-i18n="c3_d">
+                        建立了結合 Yeoh 超彈性模型與黏彈性模型的血腦屏障 3D 有限元計算體系，解析了超聲聚焦微氣泡穩態空化載荷下腦血管內皮細胞及緊密連接 (TJ) 的破壞與可逆開放機制。
+                    </p>
+                    <div class="text-xs text-slate-400 font-mono">doi: 10.1007/s10237-026-02050-0</div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800 text-sm text-center">
+        <p>&copy; 2026 Geniflow Biotech Limited. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const dict = {
+            tc: { 
+                nav_about:"關於我們", nav_services:"服務與方案", nav_tech:"前沿研發", nav_exp:"工作經驗与案例", nav_contact:"聯繫我們", 
+                title:"工作經驗與代表性科研成果", 
+                subtitle:"團隊在計算生物力學、AI 物理表型預測、微流控單細胞包裹、高通量納米藥物合成等領域發表的部分高水平期刊論文與项目成果。",
+                c1_h:"微流控液滴中超彈性細胞的確定性包裹與流固耦合機制",
+                c1_d:"構建了結合 Cahn-Hilliard 相場模型與 ALE 方法的數值計算框架，精細揭示了超彈性細胞在聚焦微流場中的流固耦合大變形規律，並提出了定量預測確定性液滴包裹的無量綱標度律。",
+                c2_h:"超橢圓分叉微混合器助力脂質納米粒 (LNP) 高通量可控合成",
+                c2_d:"利用慣性與二次渦流機制，設計并評估了超橢圓分叉結構的微混合器。數值模擬表明該結構能大幅提升多相超快混合效率，實現 mRNA-LNP 等納米藥物的高通量、粒徑可控合成。",
+                c4_h:"基於深度學習的微通道單細胞力學特性高通量實時預測",
+                c4_d:"結合 CFD 流体仿真数据与卷积神经网络（CNN），建立了由细胞穿过狭窄微通道动态形变直接反演其弹性模量与物理本构方程的 AI 预测框架，打破了传统单细胞力学测量低通量、高门槛的瓶颈。",
+                c5_h:"漸變截面微通道內細胞擠壓形變與膜穿孔 (Gating) 機制",
+                c5_d:"采用浸入有限元法（IFEM）对细胞/胶囊穿越渐变微通道时的流固耦合过程进行模拟，建立了定量评价细胞膜张力分布与胞内递送穿孔（Gating）区域的计算模型，为微流控细胞挤压递送芯片设计提供了理论指导。",
+                c3_h:"穩態空化下緊密連接對血腦屏障 (BBB) 生物力學響應的影響",
+                c3_d:"建立了結合 Yeoh 超彈性模型與黏彈性模型的血腦屏障 3D 有限元計算體系，解析了超聲聚焦微氣泡穩態空化載荷下腦血管內皮細胞及緊密連接 (TJ) 的破壞與可逆開放機制。"
+            },
+            sc: { 
+                nav_about:"关于我们", nav_services:"服务与方案", nav_tech:"前沿研发", nav_exp:"工作经验与案例", nav_contact:"联系我们", 
+                title:"工作经验与代表性科研成果", 
+                subtitle:"团队在计算生物力学、AI 物理表型预测、微流控单细胞包裹、高通量纳米药物合成等领域发表的部分高水平期刊论文与项目成果。",
+                c1_h:"微流控液滴中超弹性细胞的确定性包裹与流固耦合机制",
+                c1_d:"构建了结合 Cahn-Hilliard 相场模型与 ALE 方法的数值计算框架，精细揭示了超弹性细胞在聚焦微流场中的流固耦合大变形规律，并提出了定量预测确定性液滴包裹的无量纲标度律。",
+                c2_h:"超椭圆分叉微混合器助力脂质纳米粒 (LNP) 高通量可控合成",
+                c2_d:"利用惯性与二次涡流机制，设计并评估了超椭圆分叉结构的微混合器。数值模拟表明该结构能大幅提升多相超快混合效率，实现 mRNA-LNP 等纳米药物的高通量、粒径可控合成。",
+                c4_h:"基于深度学习的微通道单细胞力学特性高通量实时预测",
+                c4_d:"结合 CFD 流体仿真数据与卷积神经网络（CNN），建立了由细胞穿过狭窄微通道动态形变直接反演其弹性模量与物理本构方程的 AI 预测框架，打破了传统单细胞力学测量低通量、高门槛的瓶颈。",
+                c5_h:"渐变截面微通道内细胞挤压形变与膜穿孔 (Gating) 机制",
+                c5_d:"采用浸入有限元法（IFEM）对细胞/胶囊穿越渐变微通道时的流固耦合过程进行模拟，建立了定量评价细胞膜张力分布与胞内递送穿孔（Gating）区域的计算模型，为微流控细胞挤压递送芯片设计提供了理论指导。",
+                c3_h:"稳态空化下紧密连接对血脑屏障 (BBB) 生物力学响应的影响",
+                c3_d:"建立了结合 Yeoh 超弹性模型与黏弹性模型的血脑屏障 3D 有限元计算体系，解析了超声聚焦微气泡稳态空化载荷下脑血管内皮细胞及紧密连接 (TJ) 的破坏与可逆开放机制。"
+            },
+            en: { 
+                nav_about:"About Us", nav_services:"Services", nav_tech:"R&D", nav_exp:"Experience & Cases", nav_contact:"Contact", 
+                title:"Work Experience & Track Record", 
+                subtitle:"Selected high-impact peer-reviewed publications and engineering projects in CFD, AI physical phenotyping, microfluidic cell encapsulation, and LNP synthesis.",
+                c1_h:"Fluid–structure interaction & scaling laws for cell encapsulation in droplets",
+                c1_d:"Coupled the Cahn-Hilliard phase-field model with the ALE framework to investigate the transient fluid-structure interaction of hyperelastic cells in microfluidic droplets.",
+                c2_h:"Superellipse bifurcating micromixer for high-throughput LNP synthesis",
+                c2_d:"Utilized secondary vortex flows in superelliptical microchannels to achieve ultra-fast mixing and controllable synthesis of mRNA lipid nanoparticles.",
+                c4_h:"Deep learning-based high-throughput prediction of single-cell mechanics",
+                c4_d:"Combined CFD simulation data with CNNs to directly predict cell elastic modulus and constitutive models from high-speed constriction deformation images.",
+                c5_h:"Cell squeezing deformation and membrane gating in variable microchannels",
+                c5_d:"Applied Immersed Finite Element Method (IFEM) to simulate capsule/cell dynamics, establishing a computational framework for predicting membrane tension and gating zones during squeezing.",
+                c3_h:"Effects of tight junctions on blood–brain barrier biomechanics under cavitation",
+                c3_d:"Constructed a 3D FE framework with hyperelastic Yeoh and viscoelastic MSLS models to reveal endothelial cell & TJ deformation under microbubble cavitation."
+            }
+        };
+        function setLang(l) {
+            document.querySelectorAll('[data-i18n]').forEach(el => { const k = el.getAttribute('data-i18n'); if(dict[l][k]) el.textContent = dict[l][k]; });
+            ['tc','sc','en'].forEach(x => document.getElementById(`btn-${x}`).className = x===l ? "px-2.5 py-1 rounded-md bg-white text-slate-900 shadow-sm font-semibold" : "px-2.5 py-1 rounded-md text-slate-500");
+        }
+    </script>
+</body>
+</html>

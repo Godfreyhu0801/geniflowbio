@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>服務與方案 | Geniflow Biotech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { brandBlue: '#0284C7', brandTeal: '#00A896', brandRed: '#DC2626' } } } }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased flex flex-col min-h-screen">
+    <header class="sticky top-0 z-50 bg-white border-b border-slate-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-3">
+                <img src="logo.png" alt="Logo" class="h-10 w-auto" onerror="this.style.display='none'">
+                <span class="font-bold text-xl tracking-tight text-slate-900 border-l border-slate-200 pl-3">Geniflow Biotech</span>
+            </a>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+                <a href="index.html" class="hover:text-brandBlue transition" data-i18n="nav_about">關於我們</a>
+                <a href="services.html" class="text-brandBlue font-bold" data-i18n="nav_services">服務與方案</a>
+                <a href="pipeline.html" class="hover:text-brandBlue transition" data-i18n="nav_tech">前沿研發</a>
+                <a href="experience.html" class="hover:text-brandBlue transition" data-i18n="nav_exp">工作經驗与案例</a>
+                <a href="contact.html" class="hover:text-brandBlue transition" data-i18n="nav_contact">聯繫我們</a>
+            </nav>
+            <div class="flex items-center space-x-2 text-xs font-semibold bg-slate-100 p-1 rounded-lg">
+                <button onclick="setLang('tc')" id="btn-tc" class="px-2.5 py-1 rounded-md bg-white text-slate-900 shadow-sm">繁中</button>
+                <button onclick="setLang('sc')" id="btn-sc" class="px-2.5 py-1 rounded-md text-slate-500">簡中</button>
+                <button onclick="setLang('en')" id="btn-en" class="px-2.5 py-1 rounded-md text-slate-500">EN</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow py-16 max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h1 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4" data-i18n="title">核心服務與業務領域</h1>
+            <p class="text-slate-600 max-w-2xl mx-auto" data-i18n="subtitle">承接生物力學、生物流體、微流控器件设计及 AI 生物醫學工程领域的全方位計算仿真与定制化諮詢項目。</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 bg-sky-100 text-brandBlue rounded-xl flex items-center justify-center font-bold text-xl mb-6">01</div>
+                    <h2 class="text-xl font-bold text-slate-900 mb-4" data-i18n="s1_h">生物力學與計算流體力學 (CFD / FSI)</h2>
+                    <ul class="space-y-3 text-sm text-slate-600">
+                        <li class="flex items-start"><span class="text-brandBlue font-bold mr-2">•</span><span data-i18n="s1_1">單細胞/囊泡/組織的大形變与粘彈性力學仿真</span></li>
+                        <li class="flex items-start"><span class="text-brandBlue font-bold mr-2">•</span><span data-i18n="s1_2">複雜微通道內的多相流、液滴生成与流固耦合 (FSI) 计算</span></li>
+                        <li class="flex items-start"><span class="text-brandBlue font-bold mr-2">•</span><span data-i18n="s1_3">血管、屏障組織及微環境載荷下的跨尺度生物力學響應建模</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 bg-teal-100 text-brandTeal rounded-xl flex items-center justify-center font-bold text-xl mb-6">02</div>
+                    <h2 class="text-xl font-bold text-slate-900 mb-4" data-i18n="s2_h">生物醫學工程与微流控芯片諮詢</h2>
+                    <ul class="space-y-3 text-sm text-slate-600">
+                        <li class="flex items-start"><span class="text-brandTeal font-bold mr-2">•</span><span data-i18n="s2_1">微流控芯片结构设计、流场优化与可行性评估</span></li>
+                        <li class="flex items-start"><span class="text-brandTeal font-bold mr-2">•</span><span data-i18n="s2_2">高通量混合、单细胞分选与微液滴封装工艺参数咨询</span></li>
+                        <li class="flex items-start"><span class="text-brandTeal font-bold mr-2">•</span><span data-i18n="s2_3">符合国际顶级学术期刊标准的数据分析报告与工程解决方案</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 bg-red-100 text-brandRed rounded-xl flex items-center justify-center font-bold text-xl mb-6">03</div>
+                    <h2 class="text-xl font-bold text-slate-900 mb-4" data-i18n="s3_h">AI + 生物醫學工程 (AI for BME)</h2>
+                    <ul class="space-y-3 text-sm text-slate-600">
+                        <li class="flex items-start"><span class="text-brandRed font-bold mr-2">•</span><span data-i18n="s3_1">基于深度学习/神经网络的细胞物理本构参数反演与预测</span></li>
+                        <li class="flex items-start"><span class="text-brandRed font-bold mr-2">•</span><span data-i18n="s3_2">高维单细胞物理表型图像与流场数据的智能化特征提取</span></li>
+                        <li class="flex items-start"><span class="text-brandRed font-bold mr-2">•</span><span data-i18n="s3_3">结合物理感知（PINN）与数据驱动的力学诊断与优化算法开发</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800 text-sm text-center">
+        <p>&copy; 2026 Geniflow Biotech Limited. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const dict = {
+            tc: { 
+                nav_about:"關於我們", nav_services:"服務與方案", nav_tech:"前沿研發", nav_exp:"工作經驗与案例", nav_contact:"聯繫我們", 
+                title:"核心服務與業務領域", 
+                subtitle:"承接生物力學、生物流體、微流控器件设计及 AI 生物醫學工程领域的全方位計算仿真与定制化諮詢項目。", 
+                s1_h:"生物力學與計算流體力學 (CFD / FSI)", 
+                s1_1:"單細胞/囊泡/組織的大形變与粘彈性力學仿真", 
+                s1_2:"複雜微通道內的多相流、液滴生成与流固耦合 (FSI) 计算", 
+                s1_3:"血管、屏障組織及微環境載荷下的跨尺度生物力學響應建模", 
+                s2_h:"生物醫學工程与微流控芯片諮詢", 
+                s2_1:"微流控芯片结构设计、流场优化与可行性评估", 
+                s2_2:"高通量混合、单细胞分选与微液滴封装工艺参数咨询", 
+                s2_3:"符合国际顶级学术期刊标准的数据分析报告与工程解决方案",
+                s3_h:"AI + 生物醫學工程 (AI for BME)",
+                s3_1:"基于深度学习/神经网络的细胞物理本构参数反演与预测",
+                s3_2:"高维单细胞物理表型图像与流场数据的智能化特征提取",
+                s3_3:"结合物理感知（PINN）与数据驱动的力学诊断与优化算法开发"
+            },
+            sc: { 
+                nav_about:"关于我们", nav_services:"服务与方案", nav_tech:"前沿研发", nav_exp:"工作经验与案例", nav_contact:"联系我们", 
+                title:"核心服务与业务领域", 
+                subtitle:"承接生物力学、生物流体、微流控器件设计及 AI 生物医学工程领域的全方位计算仿真与定制化咨询项目。", 
+                s1_h:"生物力学与计算流体力学 (CFD / FSI)", 
+                s1_1:"单细胞/囊泡/组织的大形变与粘弹性力学仿真", 
+                s1_2:"复杂微通道内的多相流、液滴生成与流固耦合 (FSI) 计算", 
+                s1_3:"血管、屏障组织及微环境载荷下的跨尺度生物力学响应建模", 
+                s2_h:"生物医学工程与微流控芯片咨询", 
+                s2_1:"微流控芯片结构设计、流场优化与可行性评估", 
+                s2_2:"高通量混合、单细胞分选与微液滴封装工艺参数咨询", 
+                s2_3:"符合国际顶级学术期刊标准的数据分析报告与工程解决方案",
+                s3_h:"AI + 生物医学工程 (AI for BME)",
+                s3_1:"基于深度学习/神经网络的细胞物理本构参数反演与预测",
+                s3_2:"高维单细胞物理表型图像与流场数据的智能化特征提取",
+                s3_3:"结合物理感知（PINN）与数据驱动的力学诊断与优化算法开发"
+            },
+            en: { 
+                nav_about:"About Us", nav_services:"Services", nav_tech:"R&D", nav_exp:"Experience & Cases", nav_contact:"Contact", 
+                title:"Core Business Domains", 
+                subtitle:"Comprehensive computational simulation and consulting services in biomechanics, microfluidics, and AI for BME.", 
+                s1_h:"Biomechanics & CFD / FSI Simulation", 
+                s1_1:"Large deformation & viscoelastic modeling of single cells, vesicles, and tissues", 
+                s1_2:"Multiphase flow, droplet generation, and FSI in complex microchannels", 
+                s1_3:"Multi-scale biomechanical modeling under physiological loads", 
+                s2_h:"BME & Microfluidic Engineering Consulting", 
+                s2_1:"Microfluidic chip structural design, flow optimization, and feasibility assessment", 
+                s2_2:"Consulting on high-throughput mixing, sorting, and droplet encapsulation", 
+                s2_3:"Publication-grade numerical simulation reports & engineering solutions",
+                s3_h:"AI + Biomedical Engineering (AI for BME)",
+                s3_1:"Deep learning for cell mechanical property inversion and parameter prediction",
+                s3_2:"Intelligent feature extraction from high-dimensional single-cell physical phenotyping",
+                s3_3:"Physics-informed & data-driven mechanics algorithms and diagnostic tools"
+            }
+        };
+        function setLang(l) {
+            document.querySelectorAll('[data-i18n]').forEach(el => { const k = el.getAttribute('data-i18n'); if(dict[l][k]) el.textContent = dict[l][k]; });
+            ['tc','sc','en'].forEach(x => document.getElementById(`btn-${x}`).className = x===l ? "px-2.5 py-1 rounded-md bg-white text-slate-900 shadow-sm font-semibold" : "px-2.5 py-1 rounded-md text-slate-500");
+        }
+    </script>
+</body>
+</html>
